@@ -1,0 +1,454 @@
+/* ==========================================================================
+   1. RESET Y ESTILOS GLOBALES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    background-color: #050505; /* Fondo negro */
+    color: #e5e5e5;            /* Texto claro */
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==========================================================================
+   2. CONTENEDOR PRINCIPAL
+   ========================================================================== */
+.contenedor-principal {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* ==========================================================================
+   3. HEADER Y NAVEGACIÓN
+   ========================================================================== */
+header {
+    background-color: #000000;
+    border-bottom: 3px solid #1f3b96;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.contenedor-header {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 55px;
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover, 
+nav a.activo {
+    color: #3b82f6;
+    border-bottom: 2px solid #3b82f6;
+}
+
+/* ==========================================================================
+   4. SECCIÓN INICIAL (TITULO-PRINCIPAL) - INICIO
+   ========================================================================== */
+.titulo-principal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 20px 0 50px 0;
+    background: transparent;
+    border: none;
+}
+
+.columna-izquierda {
+    flex: 0 0 320px;
+    display: flex;
+    justify-content: center;
+}
+
+.escudo-principal {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    display: block;
+}
+
+.columna-texto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.columna-texto h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    line-height: 1.1;
+    margin-bottom: 4px;
+}
+
+.subtitulo-familia {
+    color: #3b82f6;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.frase-camino,
+.frase-institucional {
+    color: #e2e8f0;
+    font-size: 1.15rem;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 650px;
+}
+
+.sedes {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.banner-principal {
+    background-color: rgba(31, 59, 150, 0.2);
+    border-left: 4px solid #3b82f6;
+    color: #ffffff;
+    padding: 10px 15px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    display: inline-block;
+    width: fit-content;
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: #1f3b96;
+    color: #ffffff;
+    padding: 14px 28px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+    align-self: flex-start;
+}
+
+.btn-cta:hover {
+    background-color: #2563eb;
+}
+
+/* ==========================================================================
+   5. GRILLAS Y TARJETAS EN INICIO
+   ========================================================================== */
+.info-sedes, 
+.Entrenadores {
+    margin-top: 40px;
+}
+
+.info-sedes h2, 
+.Entrenadores h2 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin: 30px 0 20px 0;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 2px solid #1f3b96;
+    padding-bottom: 10px;
+}
+
+.grilla-sedes, 
+.grilla-entrenadores,
+.grilla-docentes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.tarjeta-sede, 
+.tarjeta-entrenadores {
+    flex: 1;
+    background-color: #0d0d0d;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #262626;
+    border-left: 4px solid #1f3b96;
+    text-align: left;
+}
+
+.tarjeta-sede h3, 
+.tarjeta-entrenadores h3 {
+    color: #ffffff;
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+/* ==========================================================================
+   6. PÁGINA: DISCIPLINAS Y ARANCELES (servicios.html) - NUEVA SECCIÓN
+   ========================================================================== */
+.seccion-actividades h1, 
+.seccion-aranceles h2,
+.seccion-disciplinas h1,
+.seccion-disciplinas h2 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin: 30px 0 25px 0;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: 2px solid #1f3b96;
+    padding-bottom: 10px;
+}
+
+/* Tarjetas de Disciplinas y Actividades */
+.tarjeta-actividad,
+.tarjeta-disciplina,
+.caja-actividad {
+    background-color: #0d0d0d;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border: 1px solid #262626;
+    border-left: 4px solid #1f3b96;
+    text-align: left;
+}
+
+.tarjeta-actividad h2,
+.tarjeta-actividad h3,
+.tarjeta-disciplina h2,
+.tarjeta-disciplina h3 {
+    color: #3b82f6;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.beneficios-box,
+.caja-info-extra {
+    margin-top: 15px;
+    padding: 12px 16px;
+    background-color: #171717;
+    border-left: 4px solid #1f3b96;
+    font-size: 0.95rem;
+    color: #d4d4d4;
+    border-radius: 0 6px 6px 0;
+}
+
+/* Estilos para Tablas de Aranceles */
+.tabla-contenedor,
+.contenedor-tabla {
+    overflow-x: auto;
+    border-radius: 8px;
+    margin: 20px auto 35px auto;
+    border: 1px solid #262626;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #0d0d0d;
+    text-align: left;
+}
+
+th, td {
+    padding: 16px;
+    border-bottom: 1px solid #262626;
+}
+
+th {
+    background-color: #161e2e;
+    color: #ffffff;
+    border-bottom: 2px solid #1f3b96;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+tr:hover {
+    background-color: #171717;
+}
+
+td strong, 
+.combo-destacado {
+    color: #3b82f6;
+}
+
+/* ==========================================================================
+   7. FORMULARIO DE CONTACTO (contacto.html)
+   ========================================================================== */
+.form-contacto {
+    background-color: #161e2e;
+    padding: 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    border: 1px solid #243044;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.campo-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-form label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #94a3b8;
+}
+
+.campo-form input, 
+.campo-form select, 
+.campo-form textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #334155;
+    background-color: #0f172a;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.campo-form input:focus, 
+.campo-form select:focus, 
+.campo-form textarea:focus {
+    outline: none;
+    border-color: #1f3b96;
+    box-shadow: 0 0 0 2px rgba(31, 59, 150, 0.4);
+}
+
+.btn-enviar {
+    background-color: #1f3b96;
+    color: #ffffff;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #2563eb;
+}
+
+/* ==========================================================================
+   8. FOOTER
+   ========================================================================== */
+footer {
+    background-color: #050811;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 50px;
+    border-top: 1px solid #1e293b;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   9. ADAPTABILIDAD A CELULARES Y TABLETS
+   ========================================================================== */
+@media (max-width: 768px) {
+    .titulo-principal,
+    .hero-inicio {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .columna-texto,
+    .hero-col-derecha {
+        text-align: center;
+        align-items: center;
+    }
+
+    .frase-institucional {
+        border-left: none;
+        border-top: 2px solid #3b82f6;
+        padding-left: 0;
+        padding-top: 10px;
+    }
+
+    .btn-cta, 
+    .banner-principal {
+        align-self: center;
+    }
+
+    .columna-izquierda {
+        flex: auto;
+    }
+
+    .escudo-principal {
+        max-width: 220px;
+    }
+
+    .grilla-sedes, 
+    .grilla-entrenadores,
+    .grilla-docentes {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 720px) {
+    .grilla-sedes, 
+    .grilla-docentes {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .columna-texto h1,
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+}
