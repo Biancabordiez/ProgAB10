@@ -179,12 +179,14 @@ nav a.activo {
 /* ==========================================================================
    5. GRILLAS Y TARJETAS EN INICIO
    ========================================================================== */
-.info-sedes, 
+.info-sedes,
+.seccion-contacto, 
 .Entrenadores {
     margin-top: 40px;
 }
 
 .info-sedes h2, 
+.seccion-contacto h2,
 .Entrenadores h2 {
     font-size: 1.8rem;
     color: #ffffff;
@@ -197,6 +199,7 @@ nav a.activo {
 
 .grilla-sedes, 
 .grilla-entrenadores,
+.info-contacto,
 .grilla-docentes {
     display: flex;
     justify-content: center;
@@ -205,6 +208,7 @@ nav a.activo {
 }
 
 .tarjeta-sede, 
+.tarjeta-contacto,
 .tarjeta-entrenadores {
     flex: 1;
     background-color: #0d0d0d;
@@ -216,6 +220,7 @@ nav a.activo {
 }
 
 .tarjeta-sede h3, 
+.tarjeta-contacto h3,
 .tarjeta-entrenadores h3 {
     color: #ffffff;
     margin-bottom: 12px;
@@ -313,7 +318,8 @@ td strong,
 /* ==========================================================================
    7. FORMULARIO DE CONTACTO (contacto.html)
    ========================================================================== */
-.form-contacto {
+.form-contacto
+{
     background-color: #161e2e;
     padding: 30px;
     border-radius: 8px;
@@ -422,6 +428,7 @@ footer {
     }
 
     .grilla-sedes, 
+    .info-contacto,
     .grilla-entrenadores,
     .grilla-docentes {
         flex-direction: column;
@@ -450,5 +457,90 @@ footer {
     .columna-texto h1,
     .hero h1 {
         font-size: 1.8rem;
+    }
+}
+.boton-menu {
+    display: none;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #3b82f6;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.seccion-calculadora {
+    background: #0d0d0d;
+    border: 1px solid #262626;
+    border-left: 4px solid #1f3b96;
+    border-radius: 8px;
+    padding: 24px;
+    margin: 28px 0;
+}
+.seccion-calculadora h2 {
+    color: #fff;
+    margin-bottom: 12px;
+}
+.lista-actividades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    padding: 16px;
+    margin: 18px 0;
+}
+.lista-actividades legend {
+    padding: 0 8px;
+    color: #94a3b8;
+    font-weight: 700;
+}
+.lista-actividades label {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.resultado-box {
+    background: #161e2e;
+    border-left: 4px solid #3b82f6;
+    border-radius: 6px;
+    padding: 16px;
+    margin: 16px 0;
+}
+.resultado-box[hidden] {
+    display: none;
+}
+#copiar-alias {
+    display: block;
+    margin-top: 12px;
+}
+.campo-invalido {
+    border: 2px solid #ef4444 !important;
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, .15);
+}
+.campo-valido {
+    border: 2px solid #22c55e !important;
+}
+.boton-deshabilitado {
+    opacity: .55;
+}
+@media (max-width: 768px) {
+    .boton-menu {
+        display: inline-block;
+    }
+    .contenedor-header {
+        flex-wrap: wrap;
+    }
+    .contenedor-header nav {
+        display: none;
+        width: 100%;
+    }
+    .contenedor-header nav.activo {
+        display: block;
+    }
+    .contenedor-header nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 14px;
     }
 }
