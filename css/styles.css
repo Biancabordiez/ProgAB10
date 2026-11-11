@@ -524,23 +524,60 @@ footer {
 .boton-deshabilitado {
     opacity: .55;
 }
+
 @media (max-width: 768px) {
+    .contenedor-header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
     .boton-menu {
         display: inline-block;
     }
-    .contenedor-header {
-        flex-wrap: wrap;
-    }
+
     .contenedor-header nav {
         display: none;
         width: 100%;
     }
+
     .contenedor-header nav.activo {
         display: block;
     }
+
     .contenedor-header nav ul {
         flex-direction: column;
         align-items: center;
         padding-top: 14px;
     }
+}
+
+/* Imágenes de las actividades */
+
+.tarjeta-actividad {
+    overflow: auto;
+}
+
+.tarjeta-actividad img {
+    float: right;
+    width: 220px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 0 15px 20px;
+    border: 2px solid #1f3b96;
+}
+
+/* Adaptación para celulares */
+
+@media (max-width: 600px) {
+
+    .tarjeta-actividad img {
+        float: none;
+        display: block;
+        width: 100%;
+        height: 200px;
+        margin: 15px 0;
+    }
+
 }
